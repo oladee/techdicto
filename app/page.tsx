@@ -9,6 +9,7 @@ import Link from "next/link";
 import PrimaryButton from "./components/Button";
 import logoWhite from "./assets/landing/logoWhite.svg"
 import Learning from "./components/Landing/Learning";
+import First from "./components/Landing/First";
 
 export default function Home() {
   useEffect(() => {
@@ -23,6 +24,7 @@ export default function Home() {
       <Hero/>
       <Kpi/>
       <Learning />
+      <First/>
     </div>
   );
 }

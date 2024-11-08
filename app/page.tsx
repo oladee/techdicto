@@ -12,6 +12,7 @@ import Learning from "./components/Landing/Learning";
 import First from "./components/Landing/First";
 import Techdicto from "./components/Landing/Techdicto";
 import Footer from "./components/Footer";
+import Ready from "./components/Landing/Ready";
 
 export default function Home() {
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function Home() {
         <Learning />
         <First/>
         <Techdicto />
+        <Ready/>
       </div>
       <Footer />
       

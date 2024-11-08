@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-dmsans antialiased lg:px-[7.7vw]`}
+        className={`font-dmsans antialiased  bg-[#08090A]`}
       >
         {children}
       </body>

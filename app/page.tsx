@@ -10,6 +10,8 @@ import PrimaryButton from "./components/Button";
 import logoWhite from "./assets/landing/logoWhite.svg"
 import Learning from "./components/Landing/Learning";
 import First from "./components/Landing/First";
+import Techdicto from "./components/Landing/Techdicto";
+import Footer from "./components/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -20,11 +22,16 @@ export default function Home() {
   }, []);
   return (
     <div className="">
-      <NavBar/>
-      <Hero/>
-      <Kpi/>
-      <Learning />
-      <First/>
+      <div className="lg:px-[7.7vw]">
+        <NavBar/>
+        <Hero/>
+        <Kpi/>
+        <Learning />
+        <First/>
+        <Techdicto />
+      </div>
+      <Footer />
+      
     </div>
   );
 }

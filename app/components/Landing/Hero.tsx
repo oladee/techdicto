@@ -60,11 +60,11 @@ const Hero = () => {
         </div>
       </section>
       <section className="relative lg:w-[47vw] " data-aos="fade-left">
-        <video autoPlay muted disablePictureInPicture loop className="w-[157px] h-[279px] md:w-[30vw] lg:w-[15.87vw] lg:h-[28.3vw] object-cover absolute z-10 top-24 lg:top-16 left-4 md:left-16 lg:left-[-30px] lg:right-0 rounded-[10px]" data-aos="fade-up">
+        <video autoPlay muted disablePictureInPicture loop playsInline className="w-[157px] h-[279px] md:w-[30vw] lg:w-[15.87vw] lg:h-[28.3vw] object-cover absolute z-10 top-24 lg:top-16 left-4 md:left-16 lg:left-[-30px] lg:right-0 rounded-[10px]" data-aos="fade-up">
             <source src="/assets/landing/clip1.mp4"  type="video/mp4" />
         </video>
         <div className="w-[50vw] h-[391px] md:w-[38vw] lg:w-[22.2vw] lg:h-[39.5vw] absolute z-20 right-28 md:right-60 lg:left-20 rounded-[10px]" data-aos="fade-down">
-        <video autoPlay muted disablePictureInPicture loop className="w-full h-full object-cover" >
+        <video autoPlay muted disablePictureInPicture loop playsInline className="w-full h-full object-cover" >
             
             <source src="/assets/landing/clip2.mp4" type="video/mp4" />
         </video>
@@ -75,7 +75,7 @@ const Hero = () => {
             <Image src={instafooter} alt="insta footer" />
         </div>
         </div>
-        <video autoPlay muted disablePictureInPicture loop className="w-[157px] h-[279px] md:w-[30vw] lg:w-[15.87vw] lg:h-[28.3vw] object-cover absolute z-10 right-4 md:right-16 top-24 lg:right-0 rounded-[10px]" data-aos="fade-down">
+        <video autoPlay muted disablePictureInPicture loop playsInline className="w-[157px] h-[279px] md:w-[30vw] lg:w-[15.87vw] lg:h-[28.3vw] object-cover absolute z-10 right-4 md:right-16 top-24 lg:right-0 rounded-[10px]" data-aos="fade-down">
             <source src="/assets/landing/clip3.mp4" type="video/mp4" />
         </video>
       </section>

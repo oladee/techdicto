@@ -13,6 +13,7 @@ import First from "./components/Landing/First";
 import Techdicto from "./components/Landing/Techdicto";
 import Footer from "./components/Footer";
 import Ready from "./components/Landing/Ready";
+import Reviews from "./components/Landing/Reviews";
 
 export default function Home() {
   useEffect(() => {
@@ -30,6 +31,7 @@ export default function Home() {
         <Learning />
         <First/>
         <Techdicto />
+        <Reviews/>
         <Ready/>
       </div>
       <Footer />

@@ -6,7 +6,7 @@ import instafooter from '../../assets/landing/instafooter.svg'
 const Hero = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-24 mt-14 lg:mt-[9.65vw]">
-      <section className="lg:w-[52.7vw] px-10 md:px-16 lg:px-0" data-aos="fade-right">
+      <section className="lg:w-[52.7vw] px-[9.09vw] md:px-16 lg:px-0" data-aos="fade-right">
         <h1 className="text-white-100 text-[11.8vw] md:text-[9vw] lg:text-[3.43vw] leading-[61px] md:leading-[81px] lg:leading-[61px] font-semibold">
         Learn tech the smart way with bite-sized lessons
         </h1>

@@ -14,6 +14,7 @@ import Techdicto from "./components/Landing/Techdicto";
 import Footer from "./components/Footer";
 import Ready from "./components/Landing/Ready";
 import Reviews from "./components/Landing/Reviews";
+import Faq from "./components/Landing/Faq";
 
 export default function Home() {
   useEffect(() => {
@@ -32,6 +33,7 @@ export default function Home() {
         <First/>
         <Techdicto />
         <Reviews/>
+        <Faq />
         <Ready/>
       </div>
       <Footer />
@@ -46,13 +48,13 @@ const NavBar = ()=>{
       <Image src={logoWhite} alt="techdicto logo" className="w-[121px] lg:w-[151px]" />
     </div>
     <div className="md:flex items-center gap-6 hidden">
-      <Link href='/features'>
+      <Link href={'#features'}>
         Features
       </Link>
-      <Link  href=''>
+      <Link  href='#works'>
         How It Works
       </Link>
-      <Link  href=''>
+      <Link href={'#faq'} scroll={true}>
         FAQs
       </Link>
     </div>

@@ -8,7 +8,7 @@ const First = () => {
   return (
     <div className="px-[12.72vw] lg:px-0 my-14 lg:my-[22.28vw]">
       <div className="flex flex-col lg:flex-row gap-2 md:gap-5 lg:gap-[4.36vw]">
-        <h2 className="text-[clamp(32px,9.09vw,40px)] md:text-5xl lg:text-[clamp(60px,4.76vw,72px)] lg:leading-[80px] font-semibold">
+        <h2 className="text-[clamp(32px,9.09vw,40px)] text-[#F4F5F8] md:text-5xl lg:text-[clamp(60px,4.76vw,72px)] lg:leading-[80px] font-semibold">
             <span className="text-[#8077E4]">Be the First</span> to Access Techdicto
         </h2>
         <div className="flex flex-col items-start gap-10">

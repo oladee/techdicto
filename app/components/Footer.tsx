@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
       </section>
       <section className="border-t border-grey-700 mt-[60px] text-center py-8">
-        <p className="text-[#fff] text-sm font-normal">{new Date().getUTCFullYear()} Techdicto. All right reserved.</p>
+        <p className="text-[#fff] text-sm font-normal">Copyright {new Date().getUTCFullYear()} Techdicto. All rights reserved.</p>
       </section>
     </div>
   )

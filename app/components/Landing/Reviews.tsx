@@ -43,7 +43,7 @@ const ReviewCard = ({name, img, comment, title}:reviewCardProps)=>{
                 </p>
             </div>
         </div>
-        <p className="text-sm">
+        <p className="text-sm text-grey-200">
             {comment}
         </p>
     </div>)

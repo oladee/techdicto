@@ -12,7 +12,6 @@ export class WaitlistService {
         });
 
         const listId = process.env.LIST_ID
-        console.log(userData.email)
 
         try{
             const response = await mailchimp.lists.addListMember(listId, {

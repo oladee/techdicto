@@ -13,6 +13,10 @@ import Reviews from "./components/Landing/Reviews";
 import Faq from "./components/Landing/Faq";
 import NavBar from "./components/NavBar";
 import MobNavBar from "./components/MobNavBar";
+import { ModalProvider } from "./context/ModalContext";
+import Modal from "./components/Landing/Modal";
+import axios from 'axios';
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_BASEURL
 
 export default function Home() {
   const [mob, setMob] = useState(false)
@@ -24,21 +28,24 @@ export default function Home() {
   }, []);
   return (
     <div className="">
-      <div className="lg:px-[7.7vw]">
-        <NavBar setMob={setMob}/>
-        <Hero/>
-        <Kpi/>
-        <Learning />
-        <First/>
-        <Techdicto />
-        <Reviews/>
-        <Faq />
-        <Ready/>
-        {
-          mob && <MobNavBar mob={mob} setMob={setMob}/>
-        }
-      </div>
-      <Footer />
+      <ModalProvider>
+        <div className="lg:px-[7.7vw]">
+          <NavBar setMob={setMob}/>
+          <Hero/>
+          <Kpi/>
+          <Learning />
+          <First/>
+          <Techdicto />
+          <Reviews/>
+          <Faq />
+          <Ready/>
+          <Modal/>
+          {
+            mob && <MobNavBar mob={mob} setMob={setMob}/>
+          }
+        </div>
+        <Footer />
+      </ModalProvider>
       
     </div>
   );

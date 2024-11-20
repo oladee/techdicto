@@ -1,20 +1,19 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
+import { contextProps } from "../declaration";
 
-interface Providerprops {
-    children : React.ReactNode
-}
+
 type Provide = {
-    openModal : ()=> void;
-    afterOpenModal : ()=> void;
-    closeModal : ()=> void;
-    modalIsOpen : boolean;
-    setModalIsOpen : React.Dispatch<React.SetStateAction<boolean>>
+  openModal : ()=> void;
+  afterOpenModal : ()=> void;
+  closeModal : ()=> void;
+  modalIsOpen : boolean;
+  setModalIsOpen : React.Dispatch<React.SetStateAction<boolean>>
 }
 
- const ModalContext = createContext<Provide >(null!);
- export default ModalContext
+const ModalContext = createContext<Provide >(null!);
 
-export const ModalProvider = ({children}:Providerprops)=>{
+
+export const ModalProvider = ({children}:contextProps)=>{
     const [modalIsOpen, setModalIsOpen] = useState(false)
 
   function openModal() {
@@ -42,3 +41,6 @@ export const ModalProvider = ({children}:Providerprops)=>{
 
   </ModalContext.Provider>)
 }
+
+const useWaitlistModal = ()=> useContext(ModalContext)
+export default useWaitlistModal

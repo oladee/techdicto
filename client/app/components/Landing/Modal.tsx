@@ -1,34 +1,43 @@
+'use client'
 import ReactModal from 'react-modal';
-import { useContext, useState } from 'react';
-import ModalContext from '../../context/ModalContext';
-import sync from '../../assets/sync.svg';
+import {useState } from 'react';
+import logowhite from '../../assets/landing/logoWhite.svg';
 import { Formik, ErrorMessage, Field, Form } from 'formik';
 import * as Yup from 'yup';
 import PrimaryButton from '../Button';
 import axios from 'axios';
-import checkMark from '../../assets/Verified Check.svg';
+import verified from '../../assets/landing/Verified.svg';
 import Image from 'next/image';
+import useWaitlistModal from '@/app/context/ModalContext';
+import { toast } from 'react-toastify';
 
 const Modal = () => {
-  const values = useContext(ModalContext);
+  const waitlistModal = useWaitlistModal();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
 
-  const mediaMatch = window.matchMedia('(min-width: 1024px)');
-  ReactModal.setAppElement('#root');
+  let mediaMatch
+
+  if(typeof window !== 'undefined'){
+    mediaMatch = window.matchMedia('(min-width: 1024px)');
+  }
+  
+  // ReactModal.setAppElement('#root');
 
   return (
     <div>
       <ReactModal
-        isOpen={values.modalIsOpen}
-        onRequestClose={values.closeModal}
+        isOpen={waitlistModal.modalIsOpen}
+        onRequestClose={()=>{
+          waitlistModal.closeModal()
+          setSuccess(false)
+        }}
         style={{
           content: {
             width: '80%',
             // maxWidth : '760px',
-            padding: mediaMatch.matches
-              ? 'clamp(90px,7.803vw,102px) clamp(150px,12.7vw,183px)'
+            padding: mediaMatch?.matches
+              ? 'clamp(90px,7.803vw,102px) clamp(120px,10.7vw,153px)'
               : '25px 10px',
             marginTop: 'auto',
             marginLeft: 'auto',
@@ -36,7 +45,7 @@ const Modal = () => {
             marginBottom: 'auto',
             height: 'fit-content',
             borderRadius: '15px',
-            backgroundColor: '#FFF8E7',
+            backgroundColor: '#08090A',
             zIndex: 300,
           },
           overlay: {
@@ -48,18 +57,15 @@ const Modal = () => {
         {!success ? (
           <>
             <div className="flex justify-center">
-              <Image src={sync} alt="" />
+              <Image src={logowhite} alt="" />
             </div>
 
             <div className="flex flex-col items-center text-center">
-              <h1 className="font-gitSans leading-[65px] md:leading-[90px] lg:leading-[120px] text-[#013131] font-normal text-3xl md:text-5xl lg:text-[clamp(70px,5.5vw,80px)]">
-                Join the Syncall Waitlist
+              <h1 className="leading-[65px] md:leading-[90px] lg:leading-[120px] text-[#fff] font-bold text-3xl md:text-5xl lg:text-[clamp(70px,5.5vw,80px)]">
+              Join the Waitlist!
               </h1>
-              <p className="font-Utile-light lg:leading-10 text-base md:text-lg lg:text-[32px] text-[#000]">
-                Get ready to unlock the power of African music synchronization!
-                Join our waitlist to gain early access to our platform and be
-                part of a community that celebrates creativity, authenticity,
-                and fair play. Don&apos;t miss out – sign up now!
+              <p className="font-light lg:leading-10 text-base md:text-lg lg:text-[32px] text-[rgba(255,255,255,0.70)] lg:mb-10">
+              Join our waitlist to gain early access to our platform and be part of a community that celebrates creativity, authenticity, and fair play. Don&apos;t miss out – sign up now!
               </p>
               <Formik
                 initialValues={{ email: '' }}
@@ -71,26 +77,32 @@ const Modal = () => {
                 onSubmit={async (values, { resetForm }) => {
                   setLoading(true);
                   await axios
-                    .post('https://syncallfe.onrender.com/api/waitlist', {
+                    .post('waitlist', {
                       email: values.email,
                     })
-                    .then((result) => {
-                      if (result.data.success) {
+                    .then(() => {
+                      setTimeout(()=>{
                         setSuccess(true);
-                        resetForm();
-                      } else {
-                        setSuccess(false);
-                        setErrorMsg(result.data.error);
-                      }
-                    });
-                  setLoading(false);
+                        resetForm()
+                        setLoading(false);
+                      },3000)
+                    })
+                    .catch((err)=>{
+                      console.log(err)
+                      setTimeout(()=>{
+                        setLoading(false);
+                        toast.error(err.response.data.message, {toastId : 'waitlist'})
+                      },2000)
+                      
+                    })
+                  
                 }}
               >
                 <Form className="w-full pt-4">
-                  <div className="flex flex-col lg:flex-row items-center  gap-[18px]">
+                  <div className="flex flex-col lg:flex-row items-center gap-[18px]">
                     <div className="w-[70%]">
                       <Field
-                        className="p-4 w-[100%] outline-yellow"
+                        className="p-4 w-[100%] text-black outline-yellow"
                         name="email"
                         placeholder="Enter your email address"
                         type="email"
@@ -103,14 +115,11 @@ const Modal = () => {
                   </div>
                   <ErrorMessage name="email">
                     {(msg) => (
-                      <div className="text-red-400 italic text-sm py-3">
+                      <div className="text-red-400 text-left italic text-sm py-3">
                         {msg}
                       </div>
                     )}
                   </ErrorMessage>
-                  <h1 className="text-red-400 italic text-sm py-3">
-                    {errorMsg}
-                  </h1>
 
                   {loading && (
                     <div role="status" className="flex justify-center">
@@ -130,7 +139,7 @@ const Modal = () => {
                           fill="currentFill"
                         />
                       </svg>
-                      <span className="sr-only">Loading...</span>
+                      <span className="sr-only text-white-100">Loading...</span>
                     </div>
                   )}
                 </Form>
@@ -140,12 +149,12 @@ const Modal = () => {
         ) : (
           <div className="flex flex-col items-center gap-6">
             <div>
-              <Image src={checkMark} alt="" />
+              <Image src={verified} alt="" />
             </div>
-            <h3 className="text-center text-2xl md:text-4xl lg:leading-[56px] lg:text-[56px] text-[#013131] font-Utile-bold">
+            <h3 className="text-center text-2xl md:text-4xl lg:leading-[56px] lg:text-[56px] text-[#fff] font-Utile-bold">
               You&apos;ve been added <br /> to the waitlist
             </h3>
-            <PrimaryButton text="Back to Home" onClick={values.closeModal} />
+            <PrimaryButton text="Back to Home" onClick={waitlistModal.closeModal} />
           </div>
         )}
       </ReactModal>

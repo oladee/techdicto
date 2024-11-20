@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 // const geistSans = localFont({
@@ -35,6 +38,7 @@ export default function RootLayout({
         className={`font-dmsans antialiased  bg-[#08090A]`}
       >
         {children}
+        <ToastContainer/>
       </body>
     </html>
   );

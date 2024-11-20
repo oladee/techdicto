@@ -3,8 +3,10 @@ import PrimaryButton from "../Button"
 import instaframe from '../../assets/landing/instaframe.png'
 import instafooter from '../../assets/landing/instafooter.svg'
 import { MouseEvent } from "react"
+import useWaitlistModal from "@/app/context/ModalContext"
 
 const Hero = () => {
+    const waitlistModal = useWaitlistModal()
   return (
     <div className="flex flex-col lg:flex-row gap-24 mt-14 lg:mt-[9.65vw] z-20">
       <section className="lg:w-[52.7vw] px-[9.09vw] md:px-16 lg:px-0" data-aos="fade-right">
@@ -15,7 +17,7 @@ const Hero = () => {
             Master the world of tech with bite-sized lessons, immersive content, and access to top mentors
         </p>
         <div className="flex items-center gap-5 md:gap-[29px] mt-14 lg:mt-10">
-            <PrimaryButton text="Join the waitlist"/>
+            <PrimaryButton onClick={waitlistModal.openModal} text="Join the waitlist"/>
             <p className="cursor-pointer">
                 Explore Features &gt;
             </p>

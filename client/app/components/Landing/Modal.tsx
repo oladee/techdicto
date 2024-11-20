@@ -58,14 +58,14 @@ const Modal = () => {
         {!success ? (
           <>
             <div className="flex justify-center">
-              <Image src={logowhite} alt="" />
+              <Image src={logowhite} alt="" className='w-24 md:w-36' />
             </div>
 
             <div className="flex flex-col items-center text-center">
-              <h1 className="leading-[65px] md:leading-[90px] lg:leading-[120px] text-[#fff] font-bold text-3xl md:text-5xl lg:text-[clamp(70px,5.5vw,80px)]">
+              <h1 className="leading-[65px] md:leading-[90px] lg:leading-[120px] text-[#fff] font-bold text-2xl md:text-5xl lg:text-[clamp(70px,5.5vw,80px)]">
               Join the Waitlist!
               </h1>
-              <p className="font-light lg:leading-10 text-base md:text-lg lg:text-[32px] text-[rgba(255,255,255,0.70)] lg:mb-10">
+              <p className="font-light lg:leading-10 text-sm md:text-lg lg:text-[32px] text-[rgba(255,255,255,0.70)] lg:mb-10">
               Join our waitlist to gain early access to our platform and be part of a community that celebrates creativity, authenticity, and fair play. Don&apos;t miss out – sign up now!
               </p>
               <Formik

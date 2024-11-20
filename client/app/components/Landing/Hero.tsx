@@ -4,6 +4,7 @@ import instaframe from '../../assets/landing/instaframe.png'
 import instafooter from '../../assets/landing/instafooter.svg'
 import { MouseEvent } from "react"
 import useWaitlistModal from "@/app/context/ModalContext"
+import Link from "next/link"
 
 const Hero = () => {
     const waitlistModal = useWaitlistModal()
@@ -18,9 +19,9 @@ const Hero = () => {
         </p>
         <div className="flex items-center gap-5 md:gap-[29px] mt-14 lg:mt-10">
             <PrimaryButton onClick={waitlistModal.openModal} text="Join the waitlist"/>
-            <p className="cursor-pointer">
-                Explore Features &gt;
-            </p>
+            <Link href='#features'>
+            Features
+            </Link>
         </div>
         <div className="hidden lg:block mt-[10.58vw]">
             <h2 className="text-grey-200 font-medium mb-4">

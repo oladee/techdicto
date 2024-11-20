@@ -4,8 +4,8 @@ import morris from '../../assets/landing/morris.svg'
 
 const Learning = () => {
   return (
-    <div>
-      <div className="px-9 md:px-14 lg:px-0 mb-24 lg:mb-[103px]">
+    <div id="features">
+      <div className="px-9 md:px-14 lg:px-0 mb-24 lg:mb-[103px]" >
         <h1 className="text-white-100 text-[12.52vw] lg:text-[4.23vw] font-semibold mb-10 lg:mb-12">
         Tech Learning Made <span className="text-[#F2426E]">Easy</span>
         </h1>

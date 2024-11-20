@@ -3,8 +3,10 @@ import PrimaryButton from "../Button"
 import exclusive from '../../assets/landing/exclusive.svg'
 import priority from '../../assets/landing/priority.svg'
 import access from '../../assets/landing/access.svg'
+import useWaitlistModal from "@/app/context/ModalContext"
 
 const First = () => {
+    const waitlistModal = useWaitlistModal()
   return (
     <div className="px-[12.72vw] lg:px-0 my-14 lg:my-[22.28vw]">
       <div className="flex flex-col lg:flex-row gap-2 md:gap-5 lg:gap-[4.36vw]">
@@ -15,7 +17,7 @@ const First = () => {
             <p className="text-base md:text-xl lg:text-[1.58vw] lg:leading-10 font-semibold text-[rgba(255,255,255,0.70)]">
                 Join our waitlist today and unlock exclusive benefits when we launch, including:
             </p>
-            <PrimaryButton text="Join the Waitlist" />
+            <PrimaryButton text="Join the Waitlist" onClick={waitlistModal.openModal} />
         </div>
       </div>
       <div className="mt-[18.12vw] lg:mt-[10.84vw] flex flex-col md:flex-row flex-wrap gap-[72px] md:gap-14 justify-between">

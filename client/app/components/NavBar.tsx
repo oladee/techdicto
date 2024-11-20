@@ -7,6 +7,7 @@ import hamIcon from '../assets/landing/ham.svg'
 import { useEffect, useState } from "react"
 import '../globals.css'
 import clsx from "clsx"
+import useWaitlistModal from "../context/ModalContext"
 
 interface prop {
     setMob : React.Dispatch<React.SetStateAction<boolean>>
@@ -14,6 +15,7 @@ interface prop {
 
 const NavBar = ({setMob}:prop)=>{
     const [sticky, setSticky] = useState(false)
+    const waitlistModal = useWaitlistModal()
    
   useEffect(()=>{
     const nav = document.getElementById('nav')!
@@ -46,7 +48,7 @@ const NavBar = ({setMob}:prop)=>{
             </Link>
       </div>
       <div className="hidden md:flex">
-        <PrimaryButton text="Join the Waitlist"/>
+        <PrimaryButton text="Join the Waitlist" onClick={waitlistModal.openModal}/>
       </div>
       <Image src={hamIcon} alt="techdicto ham menu" className="md:hidden cursor-pointer" id="ham" onClick={()=> {setMob(true)}}/>
     </div>)

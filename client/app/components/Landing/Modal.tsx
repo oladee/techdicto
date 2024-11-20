@@ -31,6 +31,7 @@ const Modal = () => {
         onRequestClose={()=>{
           waitlistModal.closeModal()
           setSuccess(false)
+          setLoading(false)
         }}
         style={{
           content: {

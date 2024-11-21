@@ -36,7 +36,7 @@ const NavBar = ({setMob}:prop)=>{
       <div>
         <Image src={logoWhite} alt="techdicto logo" className="w-[121px] lg:w-[151px]" />
       </div>
-      <div className="md:flex items-center gap-6 hidden lg:text-[1.058vw]" >
+      <div className="md:flex items-center gap-6 hidden lg:text-[1.058vw] font-medium text-[#E4E7EC]" >
             <Link href='#features'>
             Features
             </Link>

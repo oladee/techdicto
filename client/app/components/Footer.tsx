@@ -33,17 +33,17 @@ const Footer = () => {
                     Contact
                 </header>
                 <section className="flex flex-col text-sm space-y-4 text-[#CBD5E1]">
-                    <Link href='/features' target="_blank" className="flex items-center gap-2">
+                    <Link href='https://x.com/techdicto' target="_blank" className="flex items-center gap-2">
                         <Image src={twitterIcon} alt="techdicto twitter"/> Twitter
                     </Link>
-                    <Link href='/features' target="_blank" className="flex items-center gap-2">
+                    <Link href='https://www.instagram.com/techdicto/' target="_blank" className="flex items-center gap-2">
                         <Image src={igIcon} alt="techdicto instagram"/> Instagram
                     </Link>
-                    <Link href='/features' target="_blank" className="flex items-center gap-2">
+                    <Link href='http://linkedin.com/company/techdicto' target="_blank" className="flex items-center gap-2">
                         <Image src={linkedinIcon} alt="techdicto linkedin"/> Linkedin
                     </Link>
-                    <Link href='/features' target="_blank" className="flex items-center gap-2">
-                        <Image src={fbIcon} alt="techdicto linkedin"/> Linkedin
+                    <Link href='https://www.facebook.com/profile.php?id=100066805358559' target="_blank" className="flex items-center gap-2">
+                        <Image src={fbIcon} alt="techdicto linkedin"/> Facebook
                     </Link>
                 </section>
             </div>

@@ -8,7 +8,7 @@ import useWaitlistModal from "@/app/context/ModalContext"
 const First = () => {
     const waitlistModal = useWaitlistModal()
   return (
-    <div className="px-[12.72vw] lg:px-0 mt-14 lg:mt-[22.28vw]">
+    <div className="px-[12.72vw] lg:px-0 mt-14 lg:mt-[15.28vw]">
       <div className="flex flex-col lg:flex-row gap-2 md:gap-5 lg:gap-[4.36vw]">
         <h2 className="text-[clamp(32px,9.09vw,40px)] text-[#F4F5F8] md:text-5xl lg:text-[clamp(60px,4.76vw,72px)] lg:leading-[80px] font-semibold">
             <span className="text-[#8077E4]">Be the First</span> to Access Techdicto

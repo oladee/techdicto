@@ -6,7 +6,7 @@ import mentor from '../../assets/landing/mentor.svg'
 
 const Techdicto = () => {
   return (
-    <div className="px-5 mt-24 lg:py-[22.28vw]" id="works">
+    <div className="px-5 mt-24 lg:py-[15.28vw]" id="works">
       <div className='px-5 lg:px-0'>
         <Image src={square} alt="techdicto square" />
         <h5 className="font-medium text-[clamp(24px,7.27vw,32px)] lg:text-[clamp(32px,2.92vw,45px)] text-grey-300 lg:w-[35.15vw] lg:max-w-[592px] lg:leading-[48px]">

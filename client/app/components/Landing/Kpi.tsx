@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Kpi = () => {
   return (
-    <div className='mt-[30rem] px-[17.27vw] md:px-16 lg:px-0 flex flex-col md:flex-row md:items-center gap-16 md:gap-0'>
+    <div className='mt-[30rem] lg:mt-[15rem] px-[17.27vw] md:px-16 lg:px-0 flex flex-col md:flex-row md:items-center gap-16 md:gap-0'>
       <div className='md:pr-[2.76vw] lg:pr-[4.76vw]'>
         <div>
             <Image src={contentsvg} alt="techdicto content" />

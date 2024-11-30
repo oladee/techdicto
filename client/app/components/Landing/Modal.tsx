@@ -35,7 +35,7 @@ const Modal = () => {
         }}
         style={{
           content: {
-            width: '80%',
+            width: mediaMatch?.matches ? '70%' : '80%',
             // maxWidth : '760px',
             padding: mediaMatch?.matches
               ? 'clamp(90px,7.803vw,102px) clamp(120px,10.7vw,153px)'
@@ -66,7 +66,7 @@ const Modal = () => {
               Join the Waitlist!
               </h1>
               <p className="font-light lg:leading-10 text-sm md:text-lg lg:text-[32px] text-[rgba(255,255,255,0.70)] lg:mb-10">
-              Join our waitlist to gain early access to our platform and be part of a community that celebrates creativity, authenticity, and fair play. Don&apos;t miss out – sign up now!
+              Gain early access to our platform and be part of a community that celebrates creativity, authenticity, and fair play.
               </p>
               <Formik
                 initialValues={{ email: '' }}

@@ -27,7 +27,7 @@ const Hero = () => {
             <h2 className="text-grey-200 font-medium mb-4">
                 We’re going live in
             </h2>
-9            /*<div className="p-6 rounded-xl flex items-start gap-6 text-[#fff] bg-[#161616] w-fit">
+           /*<div className="p-6 rounded-xl flex items-start gap-6 text-[#fff] bg-[#161616] w-fit">
                 <div className="flex flex-col items-center justify-center">
                     <p className=" text-[32px]">
                         3

@@ -27,7 +27,7 @@ const Hero = () => {
             <h2 className="text-grey-200 font-medium mb-4">
                 We’re going live in
             </h2>
-            <div className="p-6 rounded-xl flex items-start gap-6 text-[#fff] bg-[#161616] w-fit">
+9            /*<div className="p-6 rounded-xl flex items-start gap-6 text-[#fff] bg-[#161616] w-fit">
                 <div className="flex flex-col items-center justify-center">
                     <p className=" text-[32px]">
                         3
@@ -60,7 +60,9 @@ const Hero = () => {
                         Seconds
                     </p>
                 </div>
-            </div>
+            </div>*/
+
+            
         </div>
       </section>
       <section className="relative lg:w-[47vw] " data-aos="fade-left">

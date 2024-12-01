@@ -27,22 +27,22 @@ export const reviewData = [
 export const faqData = [
     {
         heading : 'What is Techdicto’s main purpose?',
-        answer : 'Yes, you can export your data at any time in various formats including CSV and JSON.'
+        answer : 'Coming Soon'
     },
     {
         heading : 'What types of content can I expect on Techdicto?',
-        answer : 'Yes, you can export your data at any time in various formats including CSV and JSON.'
+        answer : 'Coming Soon'
     },
     {
         heading : 'Can I interact with instructors or mentors?',
-        answer : 'Yes, you can export your data at any time in various formats including CSV and JSON.'
+        answer : 'Coming Soon'
     },
     {
         heading : 'Is Techdicto suitable for beginners?',
-        answer : 'Yes, you can export your data at any time in various formats including CSV and JSON.'
+        answer : 'Coming Soon'
     },
     {
         heading : 'How can I track my progress?',
-        answer : 'Yes, you can export your data at any time in various formats including CSV and JSON.'
+        answer : 'Coming Soon'
     },
 ]

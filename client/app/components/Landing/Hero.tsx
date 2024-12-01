@@ -61,6 +61,9 @@ const Hero = () => {
                     </p>
                 </div>
             </div>*/}
+            <h3 className="text-grey-100 font-semibold text-xl">
+                Coming soon
+            </h3>
 
             
         </div>

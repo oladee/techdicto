@@ -17,13 +17,13 @@ const Footer = () => {
                     Quick Links
                 </header>
                 <section className="flex flex-col text-sm text-[#CBD5E1] space-y-4">
-                    <Link href='/features'>
+                    <Link href='#features'>
                         Features
                     </Link>
-                    <Link href='/features'>
+                    <Link href='#faq'>
                         FAQs
                     </Link>
-                    <Link href='/features'>
+                    <Link href='#works'>
                         How it Works
                     </Link>
                 </section>

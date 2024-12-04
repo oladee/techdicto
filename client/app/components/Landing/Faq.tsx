@@ -18,7 +18,7 @@ const Faq = () => {
       Frequently asked questions
       </h3>
       <p className="text-[rgba(255,255,255,0.70)] md:text-center md:text-xl">
-        These are the most commonly asked questions about Buzzly
+        These are the most commonly asked questions about Techdicto
       </p>
       <main className='mt-[61px] lg:mt-[81px]'>
         <AccordionProvider>

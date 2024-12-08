@@ -66,7 +66,7 @@ const Modal = () => {
               Join the Waitlist!
               </h1>
               <p className="font-light lg:leading-10 text-sm md:text-lg lg:text-[32px] text-[rgba(255,255,255,0.70)] lg:mb-10">
-              Gain early access to our platform and be part of a community that celebrates creativity, authenticity.
+              Gain early access to our platform and be part of a community that celebrates creativity and authenticity.
               </p>
               <Formik
                 initialValues={{ email: '' }}
